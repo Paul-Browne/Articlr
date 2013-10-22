@@ -3,4 +3,4 @@ Articlr
 
 Grid System & Typography
 
-http://paul-browne.github.io/articlr/
+paul-browne.github.io/articlr/
