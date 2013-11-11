@@ -398,7 +398,7 @@ figcaption {
 }
 figcaption:before {
 	content: "j ";
-	/*vertical-align: middle;*/
+	vertical-align: middle;
 	font-size: 16px;
 	font-family: "iconfont";
 }
