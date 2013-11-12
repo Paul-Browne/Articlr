@@ -390,7 +390,7 @@ strong {
 	font-family: 'Roboto Slab';
 }
 p.halfgap {
-	margin-top:-13px;
+	margin: -13px 0 0 0;
 }
 @font-face {
     font-family: 'iconfont';
