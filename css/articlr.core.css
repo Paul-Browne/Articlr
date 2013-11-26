@@ -34,8 +34,6 @@ hr {
 	height: 1px;
 	border: 0;
 	border-top: 1px solid #ccc;
-	*margin-top: -7px;
-	*margin-bottom: 18px;
 }
 pre {
 	white-space: pre;
@@ -231,6 +229,53 @@ th::-moz-selection {
 }
 
 /*
+             @font-face
+             ==========
+
+        fonts for every browser
+        =======================
+*/
+
+
+
+@font-face {
+	font-family: 'iconfont';
+	src:url('../fonts/iconfont.eot');
+	src:url('../fonts/iconfont.eot?#iefix')   format('embedded-opentype'),
+		url('../fonts/iconfont.woff')         format('woff'),
+		url('../fonts/iconfont.ttf')          format('truetype'),
+        url('../fonts/iconfont.svg#iconfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*
+        .svg for chrome
+        ===============
+*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+        font-family: 'iconfont';
+        src: url('../fonts/iconfont.svg#iconfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+}
+
+/*
+        .woff for opera mini & mobile
+        =============================
+*/
+
+@media only screen and (-o-min-device-pixel-ratio: 13/10) {
+    @font-face {
+        font-family: 'iconfont';
+        src: url('../fonts/iconfont.woff') format('woff');
+    }
+}
+
+/*
         Typography
         ==========
 
@@ -265,7 +310,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, .no-break, .indent, p, pre, dl, men
         to NOT adjust the line-height of the parent <p>Hello <ins>World!</ins></p>
 */
 
-a, small, s,q,u,i,b, strike, strong, mark, span, ins, del, code, kbd, samp, abbr, def, var, cite, em, .iconfont {
+a, small, s,q,u,i,b, strike, strong, mark, span, ins, del, code, kbd, samp, abbr, def, var, cite, em {
 	line-height: 1em;
 }
 a, a:visited {
@@ -282,16 +327,19 @@ a:link, a:visited:link {
 }
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .fineprint  {
 	text-rendering: optimizelegibility;
-	font-weight:400;
+	font-weight: 400;
+    font-style: normal;
 }
 h1, .h1 {
 	font-size: 42px;
 	font-family: 'Roboto Slab';
+    -webkit-text-stroke: 0.5px;
 	line-height: 52px;
 }
 h2, .h2 {
 	font-size: 36px;
 	font-family: 'Roboto Slab';
+    -webkit-text-stroke: 0.5px;
 	line-height: 39px;
 }
 h3, .h3 {
@@ -343,8 +391,22 @@ h6, .h6 {
 b, strong {
 	font-weight: 700;
 }
+b {
+    font-family:'Roboto';    
+}
+strong {
+	font-family: 'Roboto Slab';
+}
 i, dfn, em, cite, var {
 	font-style: italic;
+}
+i, dfn, var {
+    font-family:'Roboto';
+    font-weight:300;
+}
+em, cite {
+	font-family: 'Droid Serif';
+    font-weight: 400;
 }
 small, .small {
 	font-size: 75%;
@@ -383,38 +445,303 @@ dl.inline dt:after {
 dl.inline dd:after {
 	content: ".";
 }
-em, cite {
-	font-family: 'Droid Serif';
-}
-strong {
-	font-family: 'Roboto Slab';
-}
 p.halfgap {
-	margin: -13px 0 0 0;
+	margin:-13px 0 0 0;
 }
-@font-face {
-    font-family: 'iconfont';
-    src: url('/fonts/iconfont.eot');
-    src: url('/fonts/iconfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/iconfont.woff') format('woff'),
-         url('/fonts/iconfont.ttf') format('truetype'),
-         url('/fonts/iconfont.svg#iconfont') format('svg');
-    font-weight: normal;
-    font-style: normal;
+
+[class*="icon-"] {
+	font-family: 'iconfont';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 0;
+	-webkit-font-smoothing: antialiased;
+    -webkit-text-stroke: 0;
 }
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-@font-face {
-    font-family: 'iconfont';
-    src: url('/fonts/iconfont.svg#iconfont') format('svg');
+[class*="icon-"]:before {
+    position:relative;
+    top:3px;
 }
+.icon-warning:before {
+	content: "\21";
 }
-.iconfont {
-    font-family: 'iconfont';
-	vertical-align: middle;
+.icon-quote:before {
+	content: "\22";
 }
-p span.iconfont {
-	font-size: 20px;
+.icon-shopping-cart:before {
+	content: "\24";
 }
+.icon-repeat:before {
+	content: "\25";
+}
+.icon-ampersand:before {
+	content: "\26";
+}
+.icon-sort:before {
+	content: "\62";
+}
+.icon-arrow-left:before {
+	content: "\28";
+}
+.icon-file-alt:before {
+	content: "\77";
+}
+.icon-star-empty:before {
+	content: "\2a";
+}
+.icon-plus:before {
+	content: "\2b";
+}
+.icon-arrow-up:before {
+	content: "\2c";
+}
+.icon-minus:before {
+	content: "\2d";
+}
+.icon-arrow-down:before {
+	content: "\2e";
+}
+.icon-thumbs-up:before {
+	content: "\2f";
+}
+.icon-number:before {
+	content: "\30";
+}
+.icon-number-2:before {
+	content: "\31";
+}
+.icon-number-3:before {
+	content: "\32";
+}
+.icon-number-4:before {
+	content: "\33";
+}
+.icon-number-5:before {
+	content: "\34";
+}
+.icon-number-6:before {
+	content: "\35";
+}
+.icon-number-7:before {
+	content: "\36";
+}
+.icon-number-8:before {
+	content: "\37";
+}
+.icon-number-9:before {
+	content: "\38";
+}
+.icon-number-10:before {
+	content: "\39";
+}
+.icon-arrow-down-2:before {
+	content: "\3a";
+}
+.icon-arrow-up-2:before {
+	content: "\3b";
+}
+.icon-arrow-left-2:before {
+	content: "\3c";
+}
+.icon-list:before {
+	content: "\3d";
+}
+.icon-arrow-right:before {
+	content: "\3e";
+}
+.icon-help:before {
+	content: "\3f";
+}
+.icon-arrow-right-2:before {
+	content: "\29";
+}
+.icon-bookmark:before {
+	content: "\42";
+}
+.icon-clock:before {
+	content: "\43";
+}
+.icon-dribbble:before {
+	content: "\44";
+}
+.icon-login:before {
+	content: "\45";
+}
+.icon-facebook:before {
+	content: "\46";
+}
+.icon-google-plus:before {
+	content: "\47";
+}
+.icon-home:before {
+	content: "\48";
+}
+.icon-picture:before {
+	content: "\49";
+}
+.icon-picasa:before {
+	content: "\4a";
+}
+.icon-key:before {
+	content: "\4b";
+}
+.icon-linkedin:before {
+	content: "\4c";
+}
+.icon-envelope:before {
+	content: "\4d";
+}
+.icon-feed:before {
+	content: "\4e";
+}
+.icon-logout:before {
+	content: "\4f";
+}
+.icon-pinterest:before {
+	content: "\50";
+}
+.icon-comment-alt:before {
+	content: "\51";
+}
+.icon-reply:before {
+	content: "\52";
+}
+.icon-cog:before {
+	content: "\53";
+}
+.icon-twitter:before {
+	content: "\54";
+}
+.icon-user:before {
+	content: "\55";
+}
+.icon-play:before {
+	content: "\56";
+}
+.icon-remove:before {
+	content: "\58";
+}
+.icon-ok:before {
+	content: "\59";
+}
+.icon-tools:before {
+	content: "\5a";
+}
+.icon-sort-up:before {
+	content: "\5b";
+}
+.icon-thumbs-down:before {
+	content: "\5c";
+}
+.icon-sort-down:before {
+	content: "\5d";
+}
+.icon-upload:before {
+	content: "\75";
+}
+.icon-paperplane:before {
+	content: "\61";
+}
+.icon-vimeo:before {
+	content: "\76";
+}
+.icon-cross:before {
+	content: "\78";
+}
+.icon-search:before {
+	content: "\71";
+}
+.icon-calendar:before {
+	content: "\63";
+}
+.icon-download:before {
+	content: "\64";
+}
+.icon-earth:before {
+	content: "\65";
+}
+.icon-share-alt:before {
+	content: "\66";
+}
+.icon-github:before {
+	content: "\67";
+}
+.icon-heart-empty:before {
+	content: "\68";
+}
+.icon-info:before {
+	content: "\69";
+}
+.icon-phone:before {
+	content: "\74";
+}
+.icon-disk:before {
+	content: "\73";
+}
+.icon-link:before {
+	content: "\6c";
+}
+.icon-map-marker:before {
+	content: "\6d";
+}
+.icon-retweet:before {
+	content: "\72";
+}
+.icon-print:before {
+	content: "\70";
+}
+.icon-flickr:before {
+	content: "\6b";
+}
+.icon-camera:before {
+	content: "\6a";
+}
+.icon-credit:before {
+	content: "\7b";
+}
+.icon-paypal:before {
+	content: "\7d";
+}
+.icon-youtube:before {
+	content: "\79";
+}
+.icon-spinner:before {
+	content: "\6f";
+}
+.icon-music:before {
+	content: "\6e";
+}
+.icon-share:before {
+	content: "\7a";
+}
+.icon-verified11:before {
+	content: "\2714";
+}
+.icon-bar:before {
+	content: "\2015";
+}
+.icon-fancy-at2:before {
+	content: "\7c";
+}
+.icon-quote-2:before {
+	content: "\201c";
+}
+.icon-alarm:before {
+	content: "\5f";
+}
+.icon-tag:before {
+	content: "\23";
+}
+.icon-pencil:before {
+	content: "\57";
+}
+.icon-paperclip:before {
+	content: "\41";
+}
+
+
 figcaption {
 	margin-top: -8px;
 	font-size: 14px;
@@ -422,15 +749,12 @@ figcaption {
 	margin-bottom: 13px;
 }
 
-/*
-        j = camera icon
-*/
-
 figcaption:before {
-	content: "j ";
-	vertical-align: middle;
+	content: "\6a\ ";
 	font-size: 16px;
 	font-family: 'iconfont';
+    position:relative;
+    top:2px;
 }
 span.initialx2 {
 	float: left;
@@ -461,11 +785,11 @@ blockquote {
 }
 blockquote:before {
 	float: left;
-	content: '"';
+	content: '\22';
 	font-style: normal;
 	font-size: 60px;
 	font-family: "iconfont";
-	line-height: 40px;
+	line-height: 50px;
 	opacity: .4;
 	-ms-filter: "alpha(opacity=40)";
 	filter: alpha(opacity=40);
@@ -477,13 +801,8 @@ blockquote .source {
 	font-family: 'Roboto';
 }
 
-/*
-        ―――― horizontal bar
-        ---- hyphen
-*/
-
 blockquote .source:before {
-	content: '―― ';
+	content: '\2015\2015\ ';
 	font-family: 'iconfont';
 	opacity: .4;
 	-ms-filter: "alpha(opacity=40)";
@@ -501,10 +820,10 @@ q:before, q:after {
 	filter: alpha(opacity=66);
 }
 q:after {
-	content: '"';
+	content: '\22';
 }
 q:before {
-	content: '“';
+	content: '\201c';
 }
 .no-break > p {
 	display: inline;
@@ -528,7 +847,8 @@ q:before {
 img {
 	margin-top: 8px;
 	margin-bottom: 13px;
-	width: 100%;
+	max-width: 100%;
+    height:auto;
     vertical-align:middle;
 	border: 0;
 	-ms-interpolation-mode: bicubic;
@@ -980,7 +1300,6 @@ h6, .h6 {
 }
 .fineprint {
 	font-size: 8px;
-	font-family: 'verdana';
 	line-height: 11px;
 	margin-bottom: 11px;
 }
@@ -1232,4 +1551,24 @@ hr {
 	margin-left: auto !important;
 }
 }
-/* fin */ 
+
+/*
+        Print Styles
+        ============
+*/
+
+@media print {
+*{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content: " (" attr(href) ")";}
+abbr[title]:after{content: " (" attr(title) ")";}
+a[href^="javascript:"]:after,a[href^="#"]:after{content: "";}
+pre,blockquote{border:1px solid #999;page-break-inside:avoid;}
+thead{display:table-header-group;}
+tr,img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+@page{margin:0.5cm;}
+p,h2,h3{orphans:3;widows:3;}
+h2,h3{page-break-after:avoid;}
+}
+/* fin */
