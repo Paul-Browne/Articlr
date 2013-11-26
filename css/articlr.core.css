@@ -808,7 +808,7 @@ blockquote .source:before {
 }
 q:before, q:after {
 	position: relative;
-	top: -8px;
+	top: -6px;
 	vertical-align: baseline;
 	font-size: 58%;
 	font-family: 'iconfont';
