@@ -333,13 +333,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .fineprint  {
 h1, .h1 {
 	font-size: 42px;
 	font-family: 'Roboto Slab';
-    -webkit-text-stroke: 0.5px;
 	line-height: 52px;
 }
 h2, .h2 {
 	font-size: 36px;
 	font-family: 'Roboto Slab';
-    -webkit-text-stroke: 0.5px;
 	line-height: 39px;
 }
 h3, .h3 {
