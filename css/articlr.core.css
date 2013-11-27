@@ -632,6 +632,9 @@ p [class*="icon-"]:before {
 .icon-sort-up:before {
 	content: "\5b";
 }
+.icon-foward:before {
+	content: "\66";
+}
 .icon-thumbs-down:before {
 	content: "\5c";
 }
@@ -661,9 +664,6 @@ p [class*="icon-"]:before {
 }
 .icon-earth:before {
 	content: "\65";
-}
-.icon-share:before {
-	content: "\66";
 }
 .icon-github:before {
 	content: "\67";
@@ -818,6 +818,12 @@ q:before, q:after {
 	opacity: .66;
 	-ms-filter: "alpha(opacity=66)";
 	filter: alpha(opacity=66);
+}
+aside[class*="left-"] {
+    border-right: 12px solid #eee;
+}  
+aside[class*="right-"] {
+    border-left: 12px solid #eee;
 }
 q:after {
 	content: '\22';
@@ -1549,6 +1555,16 @@ hr {
 	float: none;
 	margin-right: auto;
 	margin-left: auto !important;
+}
+aside[class*="left-"],
+aside[class*="right-"] {
+    border:0;
+}
+aside[class*="m-left"] {
+    border-right: 9px solid #eee;
+}
+aside[class*="m-right"] {
+    border-left: 9px solid #eee;
 }
 }
 
