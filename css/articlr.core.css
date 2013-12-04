@@ -29,7 +29,7 @@ hr {
 }
 hr {
 	display: block;
-	margin: 0 0 24px 0;
+	margin: 0 0 1.4118em 0;
 	padding: 0;
 	height: 1px;
 	border: 0;
@@ -277,20 +277,16 @@ th::-moz-selection {
         Typography
         ==========
 
-        Try as I might to use ems instead of pixels I always found a bug in at least one of the
-        browser engines (usually webkit) which gave text different line-heights. So, for now,
-        measurements are in pixels, but I will keep trying and testing "font-size: 1.0625%;" &
-        "line-height: 1.5294;" to see if I can't get the better of it, since I know how everyone
-        loves the relative scale of em's.
+        Now available in EM's!
         
 */
 
 body {
 	color: #4d4d4d;
 	font-weight: 300;
-	font-size: 17px;
+	font-size: 106.25%;
 	font-family: 'Roboto', helvetica, verdana, sans;
-	line-height: 26px;
+	line-height: 1.5295;
 	margin:0;
 }
 
@@ -298,19 +294,20 @@ body {
         The 'universal' margin-bottom should be equal to the line-height of the body
 */
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, .no-break, .indent, p, pre, dl, menu, ol, ul, address, blockquote, table, table caption {
-	margin-bottom: 26px;
+.no-break, .indent, p, pre, dl, menu, ol, ul, address, blockquote, figure, table, table caption {
+	margin-bottom: 1.5295em;
 	margin-top: 0;
-} 
+}
 
 /*
         A reset, of sorts, to force all inline-elements like <ins>World!</ins>
         to NOT adjust the line-height of the parent <p>Hello <ins>World!</ins></p>
 */
 
-a, small, s,q,u,i,b, strike, strong, mark, span, ins, del, code, kbd, samp, abbr, def, var, cite, em {
-	line-height: 1em;
+a,small,s,q,u,i,b,strike,strong,mark,abbr,def,cite,var,kbd,span,em,ins,del,code,samp {
+    line-height:1em;
 }
+
 a, a:visited {
 	color: #37F;
 	text-decoration: none;
@@ -327,55 +324,59 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .fineprint  {
 	text-rendering: optimizelegibility;
 	font-weight: 400;
     font-style: normal;
+    margin-top:0;
 }
-h1, .h1 {
-	font-size: 42px;
-	font-family: 'Roboto Slab';
-	line-height: 52px;
+h1,.h1 {
+    font-family: 'Roboto Slab';
+    font-size: 2.4706em;
+    line-height: 1.2381em;
+    margin-bottom: 0.6191em;
 }
-h2, .h2 {
-	font-size: 36px;
-	font-family: 'Roboto Slab';
-	line-height: 39px;
+h2,.h2 {
+    font-family: 'Roboto Slab';
+    font-size: 2.1177em;
+    line-height: 1.0834em;
+    margin-bottom: 0.7223em;
 }
-h3, .h3 {
-	font-size: 24px;
-	line-height: 26px;
+h3,.h3 {
+    font-size: 1.4118em;
+    line-height: 1.0834em;
+    margin-bottom: 1.0834em;
 }
-h4, .h4 {
-	font-size: 20px;
-	line-height: 26px;
+h4,.h4 {
+    font-size: 1.1765em;
+    line-height: 1.3em;
+    margin-bottom: 1.3em; 
 }
-h5, .h5 {
+h5,.h5 {
 	text-transform: uppercase;
+    font-weight: 300;
 	letter-spacing: 1px;
-	font-weight: 300;
-	font-size: 14px;
-	line-height: 26px;
+    font-size: 0.8236em;
+    line-height: 1.8572em;
+    margin-bottom: 1.8572em;
 }
 
 /*
         <h6> & .fineprint have a margin-bottom of half the line-height of the body
 */
-
-h6, .h6 {
-	margin-bottom: 13px;
-	margin-top:0;
+h6,.h6 {
 	text-transform: uppercase;
-	font-size: 12px;
 	font-family: 'verdana';
-	line-height: 13px;
+    font-size: 0.7059em;
+    line-height: 1.0834em;
+    margin-bottom: 1.0834em;
 }
 .fineprint {
 	color: #565656;
+    font-family: 'verdana';
 	text-shadow: 0 0;
 	font-weight: normal;
-	font-size: 9px;
-	font-family: 'verdana';
-	line-height: 13px;
-	margin-bottom: 13px;
-	margin-top:0;
+    font-size: 0.5295em;
+    line-height: 1.4445em;
+    margin-bottom: 1.4445em;
 }
+
 .fineprint::selection {
 	background: #000;
 	color: #fff;
@@ -422,7 +423,7 @@ mark, span.mark {
 	color: #000;
 }
 code, kbd, pre, samp {
-	font-family: monospace, 'courier new', serif;
+	font-family: 'ubuntu mono', 'courier new', serif;
 	_font-family: 'courier new', monospace;
 }
 dt {
@@ -442,7 +443,7 @@ dl.inline dd:after {
 	content: ".";
 }
 p.halfgap {
-	margin:-13px 0 0 0;
+	margin: -0.7648em 0 0 0;
 }
 
 [class*="icon-"] {
@@ -458,10 +459,10 @@ p.halfgap {
 }
 [class*="icon-"]:before {
     position:relative;
-    top:3px;
+    top: 0.13em;
 }
-p [class*="icon-"]:before {
-    font-size:20px;
+[class*="icon-"]:before {
+    font-size: 1.1765em;
 }
 
 .icon-warning:before {
@@ -743,60 +744,61 @@ p [class*="icon-"]:before {
 
 
 figcaption {
-	margin-top: -8px;
-	font-size: 14px;
-	line-height: 18px;
-	margin-bottom: 13px;
+	margin-top: -0.5715em;
+	font-size: 0.8236em;
+	line-height: 1.2858em;
+	margin-bottom: 0.9286em;
 }
 
 figcaption:before {
 	content: "\6a\ ";
-	font-size: 16px;
+	font-size: 1.2143em;
 	font-family: 'iconfont';
     position:relative;
-    top:2px;
+    top:0.12em;
 }
+/***** got upto here ****/
 span.initialx2 {
 	float: left;
-	margin-right: 5px;
+	margin-right: 0.1em;
 	font-weight: 400;
-	font-size: 54px;
-	line-height: 48px;
+	font-size: 3.1765em;
+	line-height: 0.95em;
 }
 span.initialx2 strong {
-	line-height:48px;
+	line-height:0.95em;
 }
 span.initialx3 {
 	float: left;
-	margin-right: 7px;
+	margin-right: 0.1em;
 	font-weight: 400;
-	font-size: 84px;
-	line-height: 74px;
+	font-size: 5em;
+	line-height: 0.88em;
 }
 span.initialx3 strong {
-	line-height:74px;
+	line-height:0.8em;
 }
 address, blockquote {
 	font-style: italic;
 	font-family: 'Droid Serif', serif;
 }
 blockquote {
-	margin:0 0 26px 0;
+	margin:0 0 1.5295em 0;
 }
 blockquote:before {
 	float: left;
 	content: '\22';
 	font-style: normal;
-	font-size: 60px;
+	font-size: 3.53em;
 	font-family: "iconfont";
-	line-height: 50px;
+	line-height: 0.83em;
 	opacity: .4;
 	-ms-filter: "alpha(opacity=40)";
 	filter: alpha(opacity=40);
 }
 blockquote .source {
-	margin-top: -13px;
-	margin-bottom: 39px;
+	margin-top: -0.77em;
+	margin-bottom: 2.3em;
 	font-style: normal;
 	font-family: 'Roboto';
 }
@@ -810,7 +812,7 @@ blockquote .source:before {
 }
 q:before, q:after {
 	position: relative;
-	top: -6px;
+	top: -0.6em;
 	vertical-align: baseline;
 	font-size: 58%;
 	font-family: 'iconfont';
@@ -820,10 +822,10 @@ q:before, q:after {
 	filter: alpha(opacity=66);
 }
 aside[class*="left-"] {
-    border-right: 12px solid #eee;
+    border-right: 0.65em solid #eee;
 }  
 aside[class*="right-"] {
-    border-left: 12px solid #eee;
+    border-left: 0.65em solid #eee;
 }
 q:after {
 	content: '\22';
@@ -842,7 +844,7 @@ q:before {
 .no-break > p + .row,
 .indent > p + [class*="col-"], 
 .indent > p + .row {
-	margin-top: 26px;
+	margin-top: 1.5295em;
 }
 .indent > p + p {
 	text-indent: 2.5em;
@@ -850,9 +852,10 @@ q:before {
 .center-text {
 	text-align: center;
 }
+
 img {
-	margin-top: 8px;
-	margin-bottom: 13px;
+	margin-top: 0.4706em;
+	margin-bottom: 0.7648em;
 	max-width: 100%;
     height:auto;
     vertical-align:middle;
@@ -1270,78 +1273,83 @@ img {
         delete everything from here... 
 */
     
-body { 
-	font-size: 14px;
-	line-height: 22px;
-	font-weight: 400;
+body {
+    font-weight: 400;
+    font-size: 87.5%;
+    line-height: 1.5715;
 }
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, .no-break, .indent, p, pre, dl, menu, ol, ul, address, blockquote, table, table caption {
-	margin-bottom:22px;
+
+.no-break, .indent, p, pre, dl, menu, ol, ul, address, blockquote, figure, table, table caption {
+	margin-bottom: 1.5715em;
 } 
-h1, .h1 {
-	font-size: 36px;
-	line-height: 44px;
+h1,.h1 {
+    font-size: 2.5715em;
+    line-height: 1.2223em;
+    margin-bottom: 0.6112em;
 }
-h2, .h2 {
-	font-size: 30px;
-	line-height: 33px;
+h2,.h2 {
+    font-size: 2.1429em;
+    line-height: 1.1em;
+    margin-bottom: 0.7334em;
 }
-h3, .h3 {
-	font-size: 21px;
-	line-height: 22px;
+h3,.h3 {
+    font-size: 1.5em;
+    margin-bottom: 1.0477em;
+    line-height: 1.0477em;
 }
-h4, .h4 {
-	font-size: 17px;
-	line-height: 22px;
+h4,.h4 {
+    font-size: 1.2143em;
+    margin-bottom: 1.2942em;
+    line-height: 1.2942em;
 }
-h5, .h5 {
-	font-size: 12px;
-	line-height: 22px;
-	font-weight: 400;
+h5,.h5 {
+    font-size: 0.8572em;
+    margin-bottom: 1.8334em;
+    line-height: 1.8334em;
 }
-h6, .h6 {
-	font-size: 10px;
-	line-height: 11px;
-	margin-bottom: 11px;
+h6,.h6 {
+    font-size: 0.7143em;
+    line-height: 1.1em;
+    margin-bottom: 1.1em;
 }
 .fineprint {
-	font-size: 8px;
-	line-height: 11px;
-	margin-bottom: 11px;
+    font-size: 0.5715em;
+    line-height: 1.375em;
+    margin-bottom: 1.375em;
+}
+span.initialx3 strong {
+    line-height:0.88em;
 }
 p span.iconfont {
-	font-size: 18px;
+	font-size: 1.2858em;
 }
 p.halfgap {
-	margin: 0 0 -11px 0;
+	margin: 0 0 -0.7858em 0;
 }
 blockquote {
-	margin:0 0 22px 0;
-}
-blockquote:before {
-	font-size: 54px;
-	line-height: 48px;
+	margin:0 0 1.5715em 0;
 }
 blockquote .source {
-	margin-top: -11px;
-	margin-bottom: 33px;
+	margin-top: -0.7858em;
+	margin-bottom: 2.3572em;
 }
 figcaption {
-	margin-top: -8px;
-	font-size: 12px;
-	line-height: 16px;
-	margin-bottom: 10px
+	margin-top: -0.6667em;
+	font-size: 0.8572em;
+	line-height: 1.3334em;
+	margin-bottom: 0.8334em;
 }
 figcaption:before {
-	font-size: 14px;
+	font-size: 1.1667em;
 }
 img {
-	margin-top: 5px;
-	margin-bottom: 10px;
+	margin-top: 0.3572em;
+	margin-bottom: 0.7142em;
 }
 hr {
-	margin: 0 0 20px 0;
+	margin: 0 0 1.4285em 0;
 }
+    
 
 /*
         ...to here.
@@ -1351,11 +1359,11 @@ hr {
 .no-break > p + .row,
 .indent > p + [class*="col-"], 
 .indent > p + .row {
-	margin-top: 22px;      /* 1. */ 
+	margin-top: 1.2858em;      /* 1. */ 
 }
 .m-no-break,
 .m-indent {
-	margin-bottom: 22px;   /* 2. */
+	margin-bottom: 1.2858em;   /* 2. */
 }
 .m-no-break > p {
 	display:inline;
@@ -1370,7 +1378,7 @@ hr {
 .m-no-break > p + .row,
 .m-indent > p + [class*="m-col-"], 
 .m-indent > p + .row {
-	margin-top: 22px;      /* 3. */
+	margin-top: 1.2858em;      /* 3. */
 }
 .m-indent > p + p {
 	text-indent: 2.5em;
@@ -1378,13 +1386,13 @@ hr {
 .m-break > p,
 .m-no-indent > p {
 	display: block;
-	margin-bottom: 22px;   /* 4. */
+	margin-bottom: 1.2858em;   /* 4. */
 	text-indent: 0!important;
 }
 
 /*
-        Change the four 22px margins
-        to 26px margins if you are 
+        Change the four 1.2858em margins
+        to 1.5295em margins if you are 
         using the same font size on
         mobile & desktop.   
 */
@@ -1397,6 +1405,7 @@ hr {
 }
 [class*="col-"] {
 	width: 100%;
+    position:relative;
 }
 [class*="m-col-"] {
 	position: relative;
@@ -1559,12 +1568,6 @@ hr {
 aside[class*="left-"],
 aside[class*="right-"] {
     border:0;
-}
-aside[class*="m-left"] {
-    border-right: 9px solid #eee;
-}
-aside[class*="m-right"] {
-    border-left: 9px solid #eee;
 }
 }
 

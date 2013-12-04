@@ -13,8 +13,6 @@ button, .btn {
 .btn {
     font-family:'Roboto';
 	display: inline-block;
-	padding: 4px 9px;
-    line-height:26px;
 	font-weight: 300!important;
 	background-color: #f9f9f9;
     background-image: none;
@@ -26,8 +24,6 @@ button, .btn {
     user-select: none;
     white-space:nowrap;
     border-color:#ddd;
-    height:36px;
-    margin-bottom:26px;
     -webkit-text-stroke:0;
 }
 .btn,
@@ -48,18 +44,6 @@ button.btn:active{
     -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.5);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.5);
 }
-.btn:active {
-    padding-top:5px;
-}
-.small.btn:active {
-    padding-top:1px;
-}
-.btn.h1:active,
-.btn.h2:active,
-.btn.h3:active
-{
-    padding-top:8px;
-}
 input:focus,
 textarea:focus,
 button:focus
@@ -73,45 +57,27 @@ button.btn {
 }
 .btn.h1 {
 	border-width: 2px;
-    line-height:52px;
     padding:7px 20px 9px;
-    height: 72px;
-    letter-spacing:-3px
-}
-.btn.h1 [class*="icon"]:before {
-    font-size:45px;
-    top:4px;
+    letter-spacing:-3px;
 }
 .btn.h2 {
     border-width: 2px;
-    line-height:39px;
     padding:7px 16px 9px;
-    height: 59px;
     letter-spacing:-2px
-}
-.btn.h2 [class*="icon"]:before {
-    font-size:39px;
-    top:4px;
 }
 .btn.h3 {
     padding:7px 12px;
-    height: 42px;
     letter-spacing:-1px
 }
-.btn.h3 [class*="icon"]:before {
-    font-size:27px;
-    top:4px;
+.btn.regular {
+	padding: 4px 9px;
+    margin-bottom:1.5295em;
+    line-height:1.5295em;
 }
-.btn [class*="icon"]:before {
-    font-size:20px;
-}
-
 .btn.small {
     padding:0px 5px;
-    height: 28px;
-}
-.btn.small [class*="icon"]:before {
-    font-size:18px;
+    line-height:2em;
+    margin-bottom:2.04em;
 }
 .pill {
     -webkit-border-radius: 40px;
@@ -157,10 +123,6 @@ a.custom-color.btn:active {
 }
 */
 
-
-
-
-
 /*
         Buttons for Mobile
         ==================
@@ -171,42 +133,11 @@ a.custom-color.btn:active {
 */
 
 @media only screen and (max-width: 767px) {
-    .btn.h1 {
-        line-height:44px;
-        height: 64px;
+    .btn.regular {
+        margin-bottom: 1.5715em;
+        line-height: 1.5715em;
     }
-    .btn.h1 [class*="icon"]:before {
-        font-size:38px;
-        top:4px;
+    btn.small {
+        margin-bottom: 2.1em;
     }
-    .btn.h2 {
-        line-height:33px;
-        height: 53px;
-    }
-    .btn.h2 [class*="icon"]:before {
-        font-size:32px;
-        top:4px;
-    }
-    .btn.h3 {
-        line-height:22px;
-        height: 38px;
-    }
-    .btn.h3 [class*="icon"]:before {
-        font-size:23px;
-        top:3px;
-    }
-    .btn {
-        line-height:22px;
-        height: 32px;
-    }
-    .btn [class*="icon"]:before {
-        font-size:18px;
-    }
-    .btn.small {
-        line-height:22px;
-        height:24px;
-    }
-    .btn.small [class*="icon"]:before {
-        font-size:16px;
-    }    
 }
