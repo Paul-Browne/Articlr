@@ -1,0 +1,94 @@
+table {
+    max-width: 100%;
+    background-color: transparent;
+}
+th[data-sort] {
+    cursor:pointer;
+}
+th[data-sort]:after{
+    padding-left:12px;
+    content:"b";
+    font-size:14px;
+    font-family:"iconfont";
+}
+
+th[data-sort].sorting-asc:after {
+    content:"[";
+}
+
+th[data-sort].sorting-desc:after {
+    content:"]";
+}
+.table {
+    margin-bottom: 1.625em;
+    width: 100%;
+}
+
+.table thead > tr > th,
+.table tbody > tr > th,
+.table tfoot > tr > th,
+.table thead > tr > td,
+.table tbody > tr > td,
+.table tfoot > tr > td {
+    padding: 8px;
+    border-top: 1px solid #dddddd;
+    vertical-align: top;
+    line-height: 26px;
+}
+
+.table tbody > tr:hover {
+    background:rgba(0, 255, 0, 0.05);
+}
+    
+
+@media only screen and (max-width: 767px) {
+    .table thead > tr > th,
+.table tbody > tr > th,
+.table tfoot > tr > th,
+.table thead > tr > td,
+.table tbody > tr > td,
+.table tfoot > tr > td {
+    padding: 8px;
+    border-top: 1px solid #dddddd;
+    vertical-align: top;
+    line-height: 22px;
+}    
+}
+
+.table thead > tr > th {
+    border-bottom: 2px solid #dddddd;
+    vertical-align: bottom;
+    text-align:left;
+}
+
+.table caption + thead tr:first-child th,
+.table colgroup + thead tr:first-child th,
+.table thead:first-child tr:first-child th,
+.table caption + thead tr:first-child td,
+.table colgroup + thead tr:first-child td,
+.table thead:first-child tr:first-child td {
+    border-top: 0;
+}
+
+.table tbody + tbody {
+    border-top: 2px solid #dddddd;
+}
+
+.table .table {
+    background-color: #ffffff;
+}
+
+/***** IE7 fall-back since it doesn't understand the :after pseudo-class *****/
+.sortable th {
+    *background-image: url("../img/table-updown.png");
+    *background-position:90% 50%;
+    *background-repeat:no-repeat;
+}
+
+.sortable th.sorting-asc {
+    *background-image: url("../img/table-up.png");
+}
+
+.sortable th.sorting-desc {
+    *background-image: url("../img/table-down.png");
+}
